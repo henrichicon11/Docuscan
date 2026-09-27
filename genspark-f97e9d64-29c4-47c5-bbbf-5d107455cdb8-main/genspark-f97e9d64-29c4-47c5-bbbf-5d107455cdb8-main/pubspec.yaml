@@ -1,0 +1,65 @@
+name: docuscan_pro
+description: "DocuScan Pro - Professional document scanner and PDF toolkit."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State management
+  provider: 6.1.5+1
+
+  # Local persistence (works on web via IndexedDB)
+  hive: 2.2.3
+  hive_flutter: 1.1.0
+  shared_preferences: 2.5.3
+
+  # Imaging (pure Dart -> works on every platform)
+  image: ^4.3.0
+
+  # Capture & import
+  camera: ^0.11.0+2
+  image_picker: ^1.1.2
+  file_picker: ^8.1.6
+
+  # PDF generation / print / share
+  pdf: ^3.11.1
+  printing: ^5.13.4
+  share_plus: ^10.1.4
+
+  # On-device OCR (Android only; guarded by conditional imports so the
+  # web build never references it). 0.16.0 is the newest release that
+  # still supports Flutter 3.35.x — 0.17.x requires Flutter >= 3.44.
+  google_mlkit_text_recognition: 0.16.0
+
+  # Misc
+  uuid: ^4.5.1
+  intl: ^0.20.2
+  permission_handler: ^11.3.1
+  path_provider: ^2.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Inter-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Inter-Bold.ttf
+          weight: 700
