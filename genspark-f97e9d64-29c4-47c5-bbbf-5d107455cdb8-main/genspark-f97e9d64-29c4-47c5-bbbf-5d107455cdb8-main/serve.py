@@ -1,5 +1,5 @@
 import http.server, socketserver, os
-os.chdir('/home/user/flutter_app/build/web')
+os.chdir(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'build', 'web'))
 class H(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header('Access-Control-Allow-Origin', '*')

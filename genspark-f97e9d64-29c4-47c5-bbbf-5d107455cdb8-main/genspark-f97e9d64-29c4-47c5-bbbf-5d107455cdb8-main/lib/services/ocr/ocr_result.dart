@@ -1,5 +1,6 @@
 /// Shared OCR data types used by both the real (Android/ML Kit) and the
 /// stub (web) implementations.
+library;
 
 /// One recognised line of text with its position on the page.
 class OcrLine {
